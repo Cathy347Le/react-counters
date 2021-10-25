@@ -1,0 +1,33 @@
+.App {
+  max-width: 800px;
+  margin: auto;
+}
+
+.app-title,
+.header,
+.counter-list,
+.counter-item {
+  text-align: center;
+}
+
+.counters-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  .counter-item {
+    display: inline-block;
+    min-width: 30%;
+    button {
+      margin: 0 8px;
+      padding: 8px;
+      &.add {
+        background-color: green;
+      }
+      &.subtract {
+        background-color: red;
+      }
+    }
+  }
+}

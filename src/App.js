@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.scss";
+import Header from "./Components/Header";
+import CounterList from "./Components/CounterList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { counters: 3 };
+
+    this.increaseCounters = this.increaseCounters.bind(this);
+    this.decreaseCounters = this.decreaseCounters.bind(this);
+  }
+
+  increaseCounters() {
+    let counters = this.state.counters + 1;
+    this.setState({ counters });
+  }
+
+  decreaseCounters() {
+    let counters = this.state.counters - 1;
+    this.setState({ counters });
+  }
+
+  render() {
+    // console.log(this.state.counters);
+    return (
+      <div className="App">
+        <h1 className="app-title">React Counter Practice</h1>
+        <Header
+          counters={this.state.counters}
+          increaseCounters={this.increaseCounters}
+          decreaseCounters={this.decreaseCounters}
+        />
+        <CounterList counters={this.state.counters} />
+      </div>
+    );
+  }
 }
 
 export default App;
