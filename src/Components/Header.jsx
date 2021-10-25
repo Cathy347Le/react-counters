@@ -1,16 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Header extends Component {
-  render() {
-    //    console.log(this.props.counters);
-    return (
-      <div className="header">
-        <h2>Number of Counters: {this.props.counters}</h2>
-        <button onClick={this.props.increaseCounters}>+</button>
-        <button onClick={this.props.decreaseCounters}>-</button>
-      </div>
-    );
-  }
-}
+const Header = (props) => {
+  //   console.log(props.counters);
+  return (
+    <div className="header">
+      <h2>Number of Counters: {props.counters}</h2>
+      <button onClick={props.increaseCounters}>+</button>
+      <button onClick={props.decreaseCounters}>-</button>
+    </div>
+  );
+};
 
 export default Header;
