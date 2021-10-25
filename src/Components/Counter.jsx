@@ -21,10 +21,10 @@ class Counter extends Component {
     return (
       <div className="counter-item">
         <h3>Counter: {this.state.count}</h3>
-        <button class="add" onClick={this.increaseCount}>
+        <button className="add" onClick={this.increaseCount}>
           Increment
         </button>
-        <button class="subtract" onClick={this.decreaseCount}>
+        <button className="subtract" onClick={this.decreaseCount}>
           Decrement
         </button>
       </div>
