@@ -6,21 +6,18 @@ import CounterList from "./Components/CounterList";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { counters: 3 };
-
-    this.increaseCounters = this.increaseCounters.bind(this);
-    this.decreaseCounters = this.decreaseCounters.bind(this);
+    this.state = { counters: 3, activeCounters: 0 };
   }
 
-  increaseCounters() {
+  increaseCounters = () => {
     let counters = this.state.counters + 1;
     this.setState({ counters });
-  }
+  };
 
-  decreaseCounters() {
+  decreaseCounters = () => {
     let counters = this.state.counters - 1;
     this.setState({ counters });
-  }
+  };
 
   render() {
     // console.log(this.state.counters);
