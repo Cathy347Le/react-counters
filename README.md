@@ -1,2 +1,1 @@
-# react-counters
-Go over React Basics
+## Go over React Basics with React Counters App
