@@ -6,7 +6,7 @@ import CounterList from "./Components/CounterList";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { counters: 3, activeCounters: 0 };
+    this.state = { counters: 3 };
   }
 
   increaseCounters = () => {
